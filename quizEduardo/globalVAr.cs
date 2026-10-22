@@ -8,6 +8,7 @@ namespace quizEduardo
 {
     public static class globalVAr {
         public static double Pontucao { get; set; } = 0;
+
     }
 
 }

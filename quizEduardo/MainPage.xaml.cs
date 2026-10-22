@@ -12,7 +12,7 @@
         private async void OnCounterClicked(object sender, EventArgs e)
         {
 
-            await Navigation.PushAsync(new segu());
+            await Navigation.PushAsync(new NewPage1());
         }
     }
 

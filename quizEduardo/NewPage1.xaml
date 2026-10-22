@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="quizEduardo.segundapage"
-             Title="segundapage">
-   
+             x:Class="quizEduardo.NewPage1"
+             Title="NewPage1">
     
+
     <Grid Padding="22"
           RowDefinitions="Auto,Auto,*,Auto"
           RowSpacing="22">
@@ -34,7 +34,7 @@
                        FontAttributes="Bold"/>
             </Grid>
 
-            <ProgressBar Progress="0.3"
+            <ProgressBar Progress="0.1"
                          ProgressColor="#2563EB"
                          BackgroundColor="#DCE3EF"/>
         </VerticalStackLayout>
@@ -51,7 +51,7 @@
 
                     <VerticalStackLayout Spacing="22">
 
-                        <Label Text="PERGUNTA 03"
+                        <Label Text="PERGUNTA 01"
                                FontSize="13"
                                FontAttributes="Bold"
                                TextColor="#2563EB"/>
@@ -65,27 +65,26 @@
                         <VerticalStackLayout Spacing="12">
 
                             <RadioButton Content="A)  int"
-                                         GroupName="respostas"
-                                         Value="A"
+                                       
+                                        x:Name="rbA"
                                          IsChecked="False"
                                          TextColor="#26364D"
                                          FontSize="17"/>
 
                             <RadioButton Content="B)  string"
-                                         GroupName="respostas"
-                                         Value="B"
+                                         
+                                         x:Name="rbB"
                                          TextColor="#26364D"
                                          FontSize="17"/>
 
                             <RadioButton Content="C)  bool"
-                                         GroupName="respostas"
-                                         Value="C"
+                                         
+                                         x:Name="rbC"
                                          TextColor="#26364D"
                                          FontSize="17"/>
 
                             <RadioButton Content="D)  double"
-                                         GroupName="respostas"
-                                         Value="D"
+                                        x:Name="rbD"
                                          TextColor="#26364D"
                                          FontSize="17"/>
 
