@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using static Android.Graphics.ColorSpace;
+using static Android.Media.Audiofx.DynamicsProcessing;
 
 namespace quizEduardo
 {
@@ -22,24 +25,25 @@ namespace quizEduardo
             "B"
         };
         public static int perguntaAtual { get; set; } = 0;
-        public static bool VerificarResposta(string respostaSelecionada)
+     
+        public static async void VerificarResposta(string respostaSelecionada)
         {
             string respostaCerta = respostasCertas[perguntaAtual];
 
-            switch (respostaSelecionada == respostaCerta)
+            if(respostaCerta == respostaSelecionada)
             {
-                case true:
-                    Pontucao++;
-                    return true;
-
-                case false:
-                    return false;
-
-                default:
-                    return false;
+             
+                Pontucao++;
+                await Application.Current.MainPage.DisplayAlert("Resposta Correta", "Você acertou a resposta!", "OK");
+                
             }
+            else { 
+            }
+            await Application.Current.MainPage.DisplayAlert("Resposta Incorreta", "Você errou a resposta!", "OK");
+            }
+           
         }
     }
     
 
-}
+
