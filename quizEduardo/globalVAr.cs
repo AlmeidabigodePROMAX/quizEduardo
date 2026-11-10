@@ -4,8 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using static Android.Graphics.ColorSpace;
-using static Android.Media.Audiofx.DynamicsProcessing;
+
 
 namespace quizEduardo
 {
@@ -38,8 +37,9 @@ namespace quizEduardo
                 
             }
             else { 
+                await Application.Current.MainPage.DisplayAlert("Resposta Incorreta", "Você errou a resposta!", "OK");
             }
-            await Application.Current.MainPage.DisplayAlert("Resposta Incorreta", "Você errou a resposta!", "OK");
+            
             }
            
         }

@@ -66,25 +66,25 @@
 
                             <RadioButton Content="A)  int"
                                        
-                                        x:Name="rbA"
+                                        x:Name="alternativaA"
                                          IsChecked="False"
                                          TextColor="#26364D"
                                          FontSize="17"/>
 
                             <RadioButton Content="B)  string"
                                          
-                                         x:Name="rbB"
+                                         x:Name="alternativaB"
                                          TextColor="#26364D"
                                          FontSize="17"/>
 
                             <RadioButton Content="C)  bool"
                                          
-                                         x:Name="rbC"
+                                         x:Name="alternativaC"
                                          TextColor="#26364D"
                                          FontSize="17"/>
 
                             <RadioButton Content="D)  double"
-                                        x:Name="rbD"
+                                        x:Name="alternativaD"
                                          TextColor="#26364D"
                                          FontSize="17"/>
 
