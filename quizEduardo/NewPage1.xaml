@@ -9,7 +9,6 @@
           RowDefinitions="Auto,Auto,*,Auto"
           RowSpacing="22">
 
-        <!-- Cabeçalho -->
         <VerticalStackLayout Grid.Row="0" Spacing="8">
             <Label Text="Quiz C#"
                    FontSize="30"
@@ -23,7 +22,7 @@
                    HorizontalOptions="Center"/>
         </VerticalStackLayout>
 
-        <!-- Progresso -->
+        
         <VerticalStackLayout Grid.Row="1" Spacing="8">
             <Grid ColumnDefinitions="*,Auto">
                 <Label Text="Progresso"
@@ -39,7 +38,7 @@
                          BackgroundColor="#DCE3EF"/>
         </VerticalStackLayout>
 
-        <!-- Pergunta e respostas -->
+        
         <ScrollView Grid.Row="2">
             <VerticalStackLayout Spacing="20">
 
@@ -56,7 +55,7 @@
                                FontAttributes="Bold"
                                TextColor="#2563EB"/>
 
-                        <Label Text="Qual tipo de dado é mais adequado para armazenar um número inteiro em C#?"
+                        <Label Text="Qual tipo de dado é mais adequado para armazenar um número inteiro em SQL?"
                                FontSize="22"
                                FontAttributes="Bold"
                                TextColor="#172B4D"
@@ -96,7 +95,7 @@
             </VerticalStackLayout>
         </ScrollView>
 
-        <!-- Botão avançar -->
+       
         <Button Grid.Row="3"
                 Text="Avançar"
                 FontSize="18"
