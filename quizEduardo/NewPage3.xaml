@@ -75,7 +75,7 @@
                                   TextColor="#26364D"
                                   FontSize="17"/>
 
-                                <RadioButton Content="C)Excluir registros"
+                                <RadioButton Content="C)Excluir registrs"
                                   
                                   x:Name="alternativaC"
                                   TextColor="#26364D"
