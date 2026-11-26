@@ -29,6 +29,6 @@ public partial class NewPage8 : ContentPage
         }
 
         await globalVAr.VerificarResposta(respostaSelecionada);
-        await DisplayAlert("SELECIONE UMA ALTERNATIVA", "SELECIONE UMA ALTERNATIVA", "OK");
+        await DisplayAlert("SELECIONE UMA ALTERNATIVA", "SELECIONE UMA ALTERNATIVA", "O");
     }
 }
