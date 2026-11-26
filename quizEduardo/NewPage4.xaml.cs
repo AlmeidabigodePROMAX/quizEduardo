@@ -2,6 +2,7 @@ namespace quizEduardo;
 
 public partial class NewPage4 : ContentPage
 {
+    string respostaSelecionada = "";
 	public NewPage4()
 	{
 		InitializeComponent();

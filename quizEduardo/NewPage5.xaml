@@ -27,12 +27,12 @@ RowSpacing="22">
                     <Label Text="Progresso"
              TextColor="#344054"/>
                     <Label Grid.Column="1"
-             Text="2 / 8"
+             Text="5 / 8"
              TextColor="#174EA6"
              FontAttributes="Bold"/>
                 </Grid>
 
-                <ProgressBar Progress="0.2"
+                <ProgressBar Progress="0.5"
                ProgressColor="#2563EB"
                BackgroundColor="#DCE3EF"/>
             </VerticalStackLayout>
@@ -106,4 +106,5 @@ RowSpacing="22">
       Clicked="Avancar_Clicked"/>
 
         </Grid>
+    </VerticalStackLayout>
 </ContentPage>

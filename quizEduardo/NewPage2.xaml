@@ -62,14 +62,14 @@
 
                         <VerticalStackLayout Spacing="12">
 
-                            <RadioButton Content="A)  não"
+                            <RadioButton Content="A)  sim"
                                     
                                      x:Name="alternativaA"
                                       IsChecked="False"
                                       TextColor="#26364D"
                                       FontSize="17"/>
 
-                            <RadioButton Content="B) sim"
+                            <RadioButton Content="B) nao"
                                       
                                       x:Name="alternativaB"
                                       TextColor="#26364D"

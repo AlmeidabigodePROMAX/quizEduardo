@@ -2,7 +2,7 @@ namespace quizEduardo;
 
 public partial class NewPage5 : ContentPage
 {
-    respostaSelecionada = "";
+    string respostaSelecionada = "";
 
     public NewPage5()
 	{
@@ -30,6 +30,6 @@ public partial class NewPage5 : ContentPage
         }
 
         await globalVAr.VerificarResposta(respostaSelecionada);
-        await Navigation.PushAsync(new NewPage5());
+        await Navigation.PushAsync(new NewPage6());
     }
 }

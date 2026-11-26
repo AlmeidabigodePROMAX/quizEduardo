@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="quizEduardo.NewPage8"
+             Title="NewPage8">
+    <VerticalStackLayout>
+        <Grid Padding="22"
+RowDefinitions="Auto,Auto,*,Auto"
+RowSpacing="22">
+
+            <VerticalStackLayout Grid.Row="0" Spacing="8">
+                <Label Text="Quiz C#"
+         FontSize="30"
+         FontAttributes="Bold"
+         TextColor="#174EA6"
+         HorizontalOptions="Center"/>
+
+                <Label Text="Teste seus conhecimentos"
+         FontSize="15"
+         TextColor="#667085"
+         HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+
+
+            <VerticalStackLayout Grid.Row="1" Spacing="8">
+                <Grid ColumnDefinitions="*,Auto">
+                    <Label Text="Progresso"
+             TextColor="#344054"/>
+                    <Label Grid.Column="1"
+             Text="5 / 8"
+             TextColor="#174EA6"
+             FontAttributes="Bold"/>
+                </Grid>
+
+                <ProgressBar Progress="0.5"
+               ProgressColor="#2563EB"
+               BackgroundColor="#DCE3EF"/>
+            </VerticalStackLayout>
+
+
+            <ScrollView Grid.Row="2">
+                <VerticalStackLayout Spacing="20">
+
+                    <Border BackgroundColor="White"
+              Stroke="#E3E8F0"
+              StrokeThickness="1"
+              Padding="22"
+              StrokeShape="RoundRectangle 20">
+
+                        <VerticalStackLayout Spacing="22">
+
+                            <Label Text="PERGUNTA 01"
+                     FontSize="13"
+                     FontAttributes="Bold"
+                     TextColor="#2563EB"/>
+
+                            <Label Text="qual é a função do  INNER JOIN em sql"
+                     FontSize="22"
+                     FontAttributes="Bold"
+                     TextColor="#172B4D"
+                     LineBreakMode="WordWrap"/>
+
+                            <VerticalStackLayout Spacing="12">
+
+                                <RadioButton Content="A) Excluir registros duplicados de uma tabela"
+                             
+                              x:Name="alternativaA"
+                               IsChecked="False"
+                               TextColor="#26364D"
+                               FontSize="17"/>
+
+                                <RadioButton Content="B)Combinar registros de duas tabelas quando existe correspondências entre elas"
+                               
+                               x:Name="alternativaB"
+                               TextColor="#26364D"
+                               FontSize="17"/>
+
+                                <RadioButton Content="C)Atualizar registros de duas tabelas aso mesmos tempo"
+                               
+                               x:Name="alternativaC"
+                               TextColor="#26364D"
+                               FontSize="17"/>
+
+                                <RadioButton Content="D) Criar uma nova tabela com tosos os registros do banco"
+                              x:Name="alternativaD"
+                               TextColor="#26364D"
+                               FontSize="17"/>
+
+                            </VerticalStackLayout>
+
+                        </VerticalStackLayout>
+                    </Border>
+
+                </VerticalStackLayout>
+            </ScrollView>
+
+
+            <Button Grid.Row="3"
+      Text="Avançar"
+      FontSize="18"
+      FontAttributes="Bold"
+      TextColor="White"
+      BackgroundColor="#2563EB"
+      CornerRadius="14"
+      HeightRequest="56"
+      Clicked="Avancar_Clicked"/>
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
