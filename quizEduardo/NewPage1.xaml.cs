@@ -30,13 +30,11 @@ public partial class NewPage1 : ContentPage
         else if (alternativaD.IsChecked)
             respostaSelecionada = "D";
 
-        if (respostaSelecionada == "")
-        {
-            await DisplayAlert("SELECIONE UMA ALTERNATIVA", "SELECIONE UMA ALTERNATIVA", "OK");
-            return;
-        }
+      
 
-        await globalVAr.VerificarResposta(respostaSelecionada);
+       bool podeavancar = await globalVAr.VerificarResposta(respostaSelecionada);
+        if (!podeavancar)
+            return;
         await Navigation.PushAsync(new NewPage2());
     }
 

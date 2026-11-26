@@ -25,32 +25,46 @@ namespace quizEduardo
         };
         public static int perguntaAtual { get; set; } = 0;
      
-        public static async Task VerificarResposta(string respostaSelecionada)
+       
+       public static async Task<bool> VerificarResposta(string respostaSelecionada)
         {
+            if (string.IsNullOrEmpty(respostaSelecionada))
+            {
+                await Application.Current.MainPage.DisplayAlert(
+                    "Atenção",
+                    "Selecione uma alternativa!",
+                    "OK");
+
+                return false;
+            }
+
             string respostaCerta = respostasCertas[perguntaAtual];
 
-            if(respostaSelecionada == "")
+            if (respostaCerta == respostaSelecionada)
             {
-                await Application.Current.MainPage.DisplayAlert("SELECIONE UMA ALTERNATIVA", "SELECIONE UMA ALTERNATIVA", "OK");
-            }
-            else if (respostaCerta == respostaSelecionada)
-            {
-
-             
                 Pontucao++;
-                await Application.Current.MainPage.DisplayAlert("Resposta Correta", "Você acertou a resposta!", "OK");
-                
 
+                await Application.Current.MainPage.DisplayAlert(
+                    "Resposta Correta",
+                    "Você acertou a resposta!",
+                    "OK");
             }
-            else { 
-                await Application.Current.MainPage.DisplayAlert("Resposta Incorreta", "Você errou a resposta!", "OK");
-                
+            else
+            {
+                await Application.Current.MainPage.DisplayAlert(
+                    "Resposta Incorreta",
+                    "Você errou a resposta!",
+                    "OK");
             }
-            
+
+            perguntaAtual++;
+
+            return true;
         }
-           
-        }
+
+
     }
+}
     
 
 
