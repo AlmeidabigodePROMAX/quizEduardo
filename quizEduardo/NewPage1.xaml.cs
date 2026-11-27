@@ -5,7 +5,7 @@ namespace quizEduardo;
 public partial class NewPage1 : ContentPage
 {
     
-    string respostaSelecionada = "";
+    
     
 
     public NewPage1()
@@ -18,6 +18,7 @@ public partial class NewPage1 : ContentPage
 
     private async void Avancar_Clicked(object sender, EventArgs e)
     {
+        string respostaSelecionada = "";
         if (alternativaA.IsChecked)
             respostaSelecionada = "A";
 

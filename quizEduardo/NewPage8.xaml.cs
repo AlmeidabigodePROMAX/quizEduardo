@@ -2,7 +2,7 @@ namespace quizEduardo;
 
 public partial class NewPage8 : ContentPage
 {
-   string  respostaSelecionada = "";
+   
 	public NewPage8()
 	{
 		InitializeComponent();
@@ -10,6 +10,7 @@ public partial class NewPage8 : ContentPage
 
     private async void Avancar_Clicked(object sender, EventArgs e)
     {
+        string  respostaSelecionada = "";
         if (alternativaA.IsChecked)
             respostaSelecionada = "A";
 
@@ -22,13 +23,11 @@ public partial class NewPage8 : ContentPage
         else if (alternativaD.IsChecked)
             respostaSelecionada = "D";
 
-        if (respostaSelecionada == "")
-        {
-            await DisplayAlert("SELECIONE UMA ALTERNATIVA", "SELECIONE UMA ALTERNATIVA", "OK");
+        bool podeavancar = await globalVAr.VerificarResposta(respostaSelecionada);
+        if (!podeavancar)
             return;
-        }
+        await DisplayAlert("QUIZ FNALIZADO!", $"SUA PONTUAÇÃO FOI:{globalVAr.Pontucao} DE 8", "finalizar");
+        await Navigation.PushAsync(new MainPage());
 
-        await globalVAr.VerificarResposta(respostaSelecionada);
-        await DisplayAlert("SELECIONE UMA ALTERNATIVA", "SELECIONE UMA ALTERNATIVA", "O");
     }
 }

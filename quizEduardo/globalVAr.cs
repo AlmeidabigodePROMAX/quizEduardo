@@ -8,27 +8,21 @@ using System.Threading.Tasks;
 
 namespace quizEduardo
 {
-    public static class globalVAr {
+    public static class globalVAr
+    {
         public static double Pontucao { get; set; } = 0;
+
         public static string[] respostasCertas =
         {
-            "A",
-            "B",
-            "C",
-            "D",
-            "A",
-            "B",
-            "C",
-            "D",
-            "A",
-            "B"
+            "A", "B", "C", "D",
+            "A", "C", "C", "B"
         };
+
         public static int perguntaAtual { get; set; } = 0;
-     
-       
-       public static async Task<bool> VerificarResposta(string respostaSelecionada)
+
+        public static async Task<bool> VerificarResposta(string respostaSelecionada)
         {
-            if (string.IsNullOrEmpty(respostaSelecionada))
+            if (string.IsNullOrWhiteSpace(respostaSelecionada))
             {
                 await Application.Current.MainPage.DisplayAlert(
                     "Atenção",
@@ -38,6 +32,9 @@ namespace quizEduardo
                 return false;
             }
 
+            if (perguntaAtual >= respostasCertas.Length)
+                return false;
+
             string respostaCerta = respostasCertas[perguntaAtual];
 
             if (respostaCerta == respostaSelecionada)
@@ -45,15 +42,15 @@ namespace quizEduardo
                 Pontucao++;
 
                 await Application.Current.MainPage.DisplayAlert(
-                    "Resposta Correta",
-                    "Você acertou a resposta!",
+                    "Resposta correta",
+                    "Você acertou!",
                     "OK");
             }
             else
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Resposta Incorreta",
-                    "Você errou a resposta!",
+                    "Resposta incorreta",
+                    $"Você errou! A resposta certa é: {respostasCertas[perguntaAtual]}",
                     "OK");
             }
 
@@ -61,10 +58,9 @@ namespace quizEduardo
 
             return true;
         }
-
-
     }
+
 }
-    
+
 
 

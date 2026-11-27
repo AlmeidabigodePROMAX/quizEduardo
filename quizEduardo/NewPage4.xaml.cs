@@ -2,7 +2,7 @@ namespace quizEduardo;
 
 public partial class NewPage4 : ContentPage
 {
-    string respostaSelecionada = "";
+    
 	public NewPage4()
 	{
 		InitializeComponent();
@@ -10,6 +10,7 @@ public partial class NewPage4 : ContentPage
 
     private async void Avancar_Clicked(object sender, EventArgs e)
     {
+        string respostaSelecionada = "";
         if (alternativaA.IsChecked)
             respostaSelecionada = "A";
 
@@ -22,13 +23,9 @@ public partial class NewPage4 : ContentPage
         else if (alternativaD.IsChecked)
             respostaSelecionada = "D";
 
-        if (respostaSelecionada == "")
-        {
-            await DisplayAlert("SELECIONE UMA ALTERNATIVA", "SELECIONE UMA ALTERNATIVA", "OK");
+        bool podeavancar = await globalVAr.VerificarResposta(respostaSelecionada);
+        if (!podeavancar)
             return;
-        }
-
-        await globalVAr.VerificarResposta(respostaSelecionada);
         await Navigation.PushAsync(new NewPage5());
     }
 }
